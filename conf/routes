@@ -2,4 +2,7 @@
 # This file defines all application routes (Higher priority routes first)
 # ~~~~
 
-GET    /test  @controllers.TestController.test()
+GET    /test    @controllers.TestController.test()
+GET    /logme    @controllers.LoginController.login1()
+POST   /login   @controllers.LoginController.login()
+GET    /filterapples    @controllers.TestController.filterApples()

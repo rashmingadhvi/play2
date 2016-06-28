@@ -25,7 +25,9 @@
     </inspection_tool>
     <inspection_tool class="CastToConcreteClass" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
     <inspection_tool class="CharacterComparison" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
-    <inspection_tool class="CheckForOutOfMemoryOnLargeArrayAllocation" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="CheckForOutOfMemoryOnLargeArrayAllocation" enabled="false" level="WEAK WARNING" enabled_by_default="false">
+      <option name="m_limit" value="64" />
+    </inspection_tool>
     <inspection_tool class="ClassInitializer" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
     <inspection_tool class="ClassMayBeInterface" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
     <inspection_tool class="ClassNameDiffersFromFileName" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
@@ -36,10 +38,16 @@
     <inspection_tool class="CloneDeclaresCloneNotSupported" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
     <inspection_tool class="CloneInNonCloneableClass" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
     <inspection_tool class="CloneReturnsClassType" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
-    <inspection_tool class="CloneableImplementsClone" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
-    <inspection_tool class="ConditionalExpression" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="CloneableImplementsClone" enabled="false" level="WEAK WARNING" enabled_by_default="false">
+      <option name="m_ignoreCloneableDueToInheritance" value="false" />
+    </inspection_tool>
+    <inspection_tool class="ConditionalExpression" enabled="false" level="WEAK WARNING" enabled_by_default="false">
+      <option name="ignoreSimpleAssignmentsAndReturns" value="false" />
+    </inspection_tool>
     <inspection_tool class="ConditionalExpressionWithIdenticalBranches" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
-    <inspection_tool class="ConfusingElse" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="ConfusingElse" enabled="false" level="WEAK WARNING" enabled_by_default="false">
+      <option name="reportWhenNoStatementFollow" value="false" />
+    </inspection_tool>
     <inspection_tool class="ConnectionResource" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
     <inspection_tool class="ConstantConditionalExpression" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
     <inspection_tool class="ConstantDeclaredInAbstractClass" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
@@ -50,42 +58,84 @@
     <inspection_tool class="ContinueStatement" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
     <inspection_tool class="ContinueStatementWithLabel" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
     <inspection_tool class="DateToString" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
-    <inspection_tool class="DeclareCollectionAsInterface" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="DeclareCollectionAsInterface" enabled="false" level="WEAK WARNING" enabled_by_default="false">
+      <option name="ignoreLocalVariables" value="false" />
+      <option name="ignorePrivateMethodsAndFields" value="false" />
+    </inspection_tool>
     <inspection_tool class="DefaultAnnotationParam" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
     <inspection_tool class="DefaultNotLastCaseInSwitch" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
     <inspection_tool class="DialogTitleCapitalization" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
     <inspection_tool class="DuplicateBooleanBranch" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
-    <inspection_tool class="DuplicateCondition" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
-    <inspection_tool class="DuplicateStringLiteralInspection" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="DuplicateCondition" enabled="false" level="WEAK WARNING" enabled_by_default="false">
+      <option name="ignoreMethodCalls" value="false" />
+    </inspection_tool>
+    <inspection_tool class="DuplicateStringLiteralInspection" enabled="false" level="WEAK WARNING" enabled_by_default="false">
+      <option name="MIN_STRING_LENGTH" value="5" />
+      <option name="IGNORE_PROPERTY_KEYS" value="false" />
+    </inspection_tool>
     <inspection_tool class="DuplicateThrows" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
     <inspection_tool class="ElementOnlyUsedFromTestCode" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
-    <inspection_tool class="EmptyClass" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="EmptyClass" enabled="false" level="WEAK WARNING" enabled_by_default="false">
+      <option name="ignorableAnnotations">
+        <value />
+      </option>
+      <option name="ignoreClassWithParameterization" value="false" />
+      <option name="ignoreThrowables" value="true" />
+      <option name="commentsAreContent" value="true" />
+    </inspection_tool>
     <inspection_tool class="EmptyMethod" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
-    <inspection_tool class="EnumSwitchStatementWhichMissesCases" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="EnumSwitchStatementWhichMissesCases" enabled="false" level="WEAK WARNING" enabled_by_default="false">
+      <option name="ignoreSwitchStatementsWithDefault" value="false" />
+    </inspection_tool>
     <inspection_tool class="ExpectedExceptionNeverThrown" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
     <inspection_tool class="ExtendsObject" enabled="false" level="WARNING" enabled_by_default="false" />
     <inspection_tool class="FallthruInSwitchStatement" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
-    <inspection_tool class="FeatureEnvy" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="FeatureEnvy" enabled="false" level="WEAK WARNING" enabled_by_default="false">
+      <option name="ignoreTestCases" value="false" />
+    </inspection_tool>
     <inspection_tool class="FieldCanBeLocal" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
-    <inspection_tool class="FieldRepeatedlyAccessed" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="FieldRepeatedlyAccessed" enabled="false" level="WEAK WARNING" enabled_by_default="false">
+      <option name="m_ignoreFinalFields" value="false" />
+    </inspection_tool>
     <inspection_tool class="FinalClass" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
     <inspection_tool class="FinalMethod" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
     <inspection_tool class="FinalMethodInFinalClass" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
     <inspection_tool class="FinalPrivateMethod" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
     <inspection_tool class="FinalStaticMethod" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
-    <inspection_tool class="ForLoopReplaceableByWhile" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
-    <inspection_tool class="ForLoopWithMissingComponent" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
-    <inspection_tool class="HardCodedStringLiteral" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="ForLoopReplaceableByWhile" enabled="false" level="WEAK WARNING" enabled_by_default="false">
+      <option name="m_ignoreLoopsWithoutConditions" value="false" />
+    </inspection_tool>
+    <inspection_tool class="ForLoopWithMissingComponent" enabled="false" level="WEAK WARNING" enabled_by_default="false">
+      <option name="ignoreCollectionLoops" value="false" />
+    </inspection_tool>
+    <inspection_tool class="HardCodedStringLiteral" enabled="false" level="WEAK WARNING" enabled_by_default="false">
+      <option name="ignoreForAssertStatements" value="true" />
+      <option name="ignoreForExceptionConstructors" value="true" />
+      <option name="ignoreForSpecifiedExceptionConstructors" value="" />
+      <option name="ignoreForJUnitAsserts" value="true" />
+      <option name="ignoreForClassReferences" value="true" />
+      <option name="ignoreForPropertyKeyReferences" value="true" />
+      <option name="ignoreForNonAlpha" value="true" />
+      <option name="ignoreAssignedToConstants" value="false" />
+      <option name="ignoreToString" value="false" />
+      <option name="nonNlsCommentPattern" value="NON-NLS" />
+    </inspection_tool>
     <inspection_tool class="IfMayBeConditional" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
     <inspection_tool class="IfStatementWithIdenticalBranches" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
-    <inspection_tool class="IfStatementWithTooManyBranches" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="IfStatementWithTooManyBranches" enabled="false" level="WEAK WARNING" enabled_by_default="false">
+      <option name="m_limit" value="3" />
+    </inspection_tool>
     <inspection_tool class="IgnoredJUnitTest" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
     <inspection_tool class="ImplicitDefaultCharsetUsage" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
     <inspection_tool class="IncompatibleMask" enabled="false" level="WARNING" enabled_by_default="false" />
     <inspection_tool class="InfiniteLoopStatement" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
-    <inspection_tool class="InnerClassOnInterface" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="InnerClassOnInterface" enabled="false" level="WEAK WARNING" enabled_by_default="false">
+      <option name="m_ignoreInnerInterfaces" value="false" />
+    </inspection_tool>
     <inspection_tool class="InstanceVariableOfConcreteClass" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
-    <inspection_tool class="InstanceofChain" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="InstanceofChain" enabled="false" level="WEAK WARNING" enabled_by_default="false">
+      <option name="ignoreInstanceofOnLibraryClasses" value="false" />
+    </inspection_tool>
     <inspection_tool class="InstanceofInterfaces" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
     <inspection_tool class="InstanceofThis" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
     <inspection_tool class="InterfaceMayBeAnnotatedFunctional" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
@@ -95,23 +145,41 @@
     <inspection_tool class="JUnit3StyleTestMethodInJUnit4Class" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
     <inspection_tool class="JUnit4AnnotatedMethodInJUnit3TestCase" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
     <inspection_tool class="JUnit4MethodNamingConvention" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
-    <inspection_tool class="JUnitAbstractTestClassNamingConvention" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="JUnitAbstractTestClassNamingConvention" enabled="false" level="WEAK WARNING" enabled_by_default="false">
+      <option name="m_regex" value="[A-Z][A-Za-z\d]*TestCase" />
+      <option name="m_minLength" value="12" />
+      <option name="m_maxLength" value="64" />
+    </inspection_tool>
     <inspection_tool class="JUnitDatapoint" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
     <inspection_tool class="JUnitRule" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
-    <inspection_tool class="JUnitTestClassNamingConvention" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="JUnitTestClassNamingConvention" enabled="false" level="WEAK WARNING" enabled_by_default="false">
+      <option name="m_regex" value="[A-Z][A-Za-z\d]*Test" />
+      <option name="m_minLength" value="8" />
+      <option name="m_maxLength" value="64" />
+    </inspection_tool>
     <inspection_tool class="LabeledStatement" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
-    <inspection_tool class="LawOfDemeter" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="LawOfDemeter" enabled="false" level="WEAK WARNING" enabled_by_default="false">
+      <option name="ignoreLibraryCalls" value="true" />
+    </inspection_tool>
     <inspection_tool class="LimitedScopeInnerClass" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
-    <inspection_tool class="ListenerMayUseAdapter" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="ListenerMayUseAdapter" enabled="false" level="WEAK WARNING" enabled_by_default="false">
+      <option name="checkForEmptyMethods" value="true" />
+    </inspection_tool>
     <inspection_tool class="LocalVariableOfConcreteClass" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
-    <inspection_tool class="LoopConditionNotUpdatedInsideLoop" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="LoopConditionNotUpdatedInsideLoop" enabled="false" level="WEAK WARNING" enabled_by_default="false">
+      <option name="ignoreIterators" value="false" />
+    </inspection_tool>
     <inspection_tool class="LoopStatementsThatDontLoop" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
     <inspection_tool class="LoopWithImplicitTerminationCondition" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
     <inspection_tool class="MagicCharacter" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
     <inspection_tool class="MagicNumber" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
     <inspection_tool class="MarkerInterface" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
     <inspection_tool class="MethodCallInLoopCondition" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
-    <inspection_tool class="MethodOnlyUsedFromInnerClass" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="MethodOnlyUsedFromInnerClass" enabled="false" level="WEAK WARNING" enabled_by_default="false">
+      <option name="ignoreMethodsAccessedFromAnonymousClass" value="false" />
+      <option name="ignoreStaticMethodsFromNonStaticInnerClass" value="false" />
+      <option name="onlyReportStaticMethods" value="false" />
+    </inspection_tool>
     <inspection_tool class="MethodReturnAlwaysConstant" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
     <inspection_tool class="MethodReturnOfConcreteClass" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
     <inspection_tool class="MigrateAssertToMatcherAssert" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
@@ -120,11 +188,18 @@
     <inspection_tool class="MisspelledTearDown" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
     <inspection_tool class="MultipleExceptionsDeclaredOnTestMethod" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
     <inspection_tool class="MultipleTopLevelClassesInFile" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
-    <inspection_tool class="MultiplyOrDivideByPowerOfTwo" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
-    <inspection_tool class="NegatedConditional" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="MultiplyOrDivideByPowerOfTwo" enabled="false" level="WEAK WARNING" enabled_by_default="false">
+      <option name="checkDivision" value="false" />
+    </inspection_tool>
+    <inspection_tool class="NegatedConditional" enabled="false" level="WEAK WARNING" enabled_by_default="false">
+      <option name="m_ignoreNegatedNullComparison" value="true" />
+    </inspection_tool>
     <inspection_tool class="NegatedConditionalExpression" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
     <inspection_tool class="NegatedEqualityExpression" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
-    <inspection_tool class="NegatedIfElse" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="NegatedIfElse" enabled="false" level="WEAK WARNING" enabled_by_default="false">
+      <option name="m_ignoreNegatedNullComparison" value="true" />
+      <option name="m_ignoreNegatedZeroComparison" value="false" />
+    </inspection_tool>
     <inspection_tool class="NegativelyNamedBooleanVariable" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
     <inspection_tool class="NestedConditionalExpression" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
     <inspection_tool class="NestedSwitchStatement" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
@@ -134,13 +209,22 @@
     <inspection_tool class="NoopMethodInAbstractClass" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
     <inspection_tool class="NumericToString" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
     <inspection_tool class="OptionalUsedAsFieldOrParameterType" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
-    <inspection_tool class="OverlyComplexBooleanExpression" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
-    <inspection_tool class="OverlyLargePrimitiveArrayInitializer" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
-    <inspection_tool class="OverlyStrongTypeCast" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="OverlyComplexBooleanExpression" enabled="false" level="WEAK WARNING" enabled_by_default="false">
+      <option name="m_limit" value="3" />
+      <option name="m_ignorePureConjunctionsDisjunctions" value="true" />
+    </inspection_tool>
+    <inspection_tool class="OverlyLargePrimitiveArrayInitializer" enabled="false" level="WEAK WARNING" enabled_by_default="false">
+      <option name="m_limit" value="64" />
+    </inspection_tool>
+    <inspection_tool class="OverlyStrongTypeCast" enabled="false" level="WEAK WARNING" enabled_by_default="false">
+      <option name="ignoreInMatchingInstanceof" value="false" />
+    </inspection_tool>
     <inspection_tool class="ParameterCanBeLocal" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
     <inspection_tool class="ParameterOfConcreteClass" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
     <inspection_tool class="ParameterizedParametersStaticCollection" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
-    <inspection_tool class="PointlessBitwiseExpression" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="PointlessBitwiseExpression" enabled="false" level="WARNING" enabled_by_default="false">
+      <option name="m_ignoreExpressionsContainingConstants" value="false" />
+    </inspection_tool>
     <inspection_tool class="PointlessBooleanExpression" enabled="true" level="WEAK WARNING" enabled_by_default="true">
       <option name="m_ignoreExpressionsContainingConstants" value="true" />
     </inspection_tool>
@@ -150,7 +234,12 @@
     <inspection_tool class="ProtectedMemberInFinalClass" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
     <inspection_tool class="PublicConstructor" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
     <inspection_tool class="PublicConstructorInNonPublicClass" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
-    <inspection_tool class="PublicMethodNotExposedInInterface" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="PublicMethodNotExposedInInterface" enabled="false" level="WEAK WARNING" enabled_by_default="false">
+      <option name="ignorableAnnotations">
+        <value />
+      </option>
+      <option name="onlyWarnIfContainingClassImplementsAnInterface" value="false" />
+    </inspection_tool>
     <inspection_tool class="RecordStoreResource" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
     <inspection_tool class="RedundantThrows" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
     <inspection_tool class="RedundantThrowsDeclaration" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
@@ -173,32 +262,61 @@
     <inspection_tool class="StaticSuite" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
     <inspection_tool class="StaticVariableOfConcreteClass" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
     <inspection_tool class="StringCompareTo" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
-    <inspection_tool class="StringConcatenation" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="StringConcatenation" enabled="false" level="WEAK WARNING" enabled_by_default="false">
+      <option name="ignoreAsserts" value="false" />
+      <option name="ignoreSystemOuts" value="false" />
+      <option name="ignoreSystemErrs" value="false" />
+      <option name="ignoreThrowableArguments" value="false" />
+      <option name="ignoreConstantInitializers" value="false" />
+      <option name="ignoreInTestCode" value="false" />
+      <option name="ignoreInToString" value="false" />
+    </inspection_tool>
     <inspection_tool class="StringEquals" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
     <inspection_tool class="StringEqualsIgnoreCase" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
     <inspection_tool class="StringToUpperWithoutLocale" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
     <inspection_tool class="StringTokenizer" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
     <inspection_tool class="SuperTearDownInFinally" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
     <inspection_tool class="SwitchStatement" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
-    <inspection_tool class="SwitchStatementDensity" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="SwitchStatementDensity" enabled="false" level="WEAK WARNING" enabled_by_default="false">
+      <option name="m_limit" value="20" />
+    </inspection_tool>
     <inspection_tool class="SwitchStatementWithConfusingDeclaration" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
-    <inspection_tool class="SwitchStatementWithTooFewBranches" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
-    <inspection_tool class="SwitchStatementWithTooManyBranches" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
-    <inspection_tool class="SwitchStatementsWithoutDefault" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="SwitchStatementWithTooFewBranches" enabled="false" level="WEAK WARNING" enabled_by_default="false">
+      <option name="m_limit" value="2" />
+    </inspection_tool>
+    <inspection_tool class="SwitchStatementWithTooManyBranches" enabled="false" level="WEAK WARNING" enabled_by_default="false">
+      <option name="m_limit" value="10" />
+    </inspection_tool>
+    <inspection_tool class="SwitchStatementsWithoutDefault" enabled="false" level="WEAK WARNING" enabled_by_default="false">
+      <option name="m_ignoreFullyCoveredEnums" value="true" />
+    </inspection_tool>
     <inspection_tool class="TeardownCallsSuperTeardown" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
     <inspection_tool class="TeardownIsPublicVoidNoArg" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
     <inspection_tool class="TestCaseInProductCode" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
     <inspection_tool class="TestCaseWithConstructor" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
-    <inspection_tool class="TestCaseWithNoTestMethods" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="TestCaseWithNoTestMethods" enabled="false" level="WEAK WARNING" enabled_by_default="false">
+      <option name="ignoreSupers" value="false" />
+    </inspection_tool>
     <inspection_tool class="TestMethodInProductCode" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
     <inspection_tool class="TestMethodIsPublicVoidNoArg" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
-    <inspection_tool class="TestMethodWithoutAssertion" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="TestMethodWithoutAssertion" enabled="false" level="WEAK WARNING" enabled_by_default="false">
+      <option name="assertionMethods" value="org.junit.Assert,assert.*|fail.*,junit.framework.Assert,assert.*|fail.*,org.mockito.Mockito,verify.*,org.mockito.InOrder,verify,org.junit.rules.ExpectedException,expect.*,org.hamcrest.MatcherAssert,assertThat" />
+      <option name="assertKeywordIsAssertion" value="false" />
+    </inspection_tool>
     <inspection_tool class="TimeToString" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
-    <inspection_tool class="TooBroadScope" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="TooBroadScope" enabled="false" level="WEAK WARNING" enabled_by_default="false">
+      <option name="m_allowConstructorAsInitializer" value="false" />
+      <option name="m_onlyLookAtBlocks" value="false" />
+    </inspection_tool>
     <inspection_tool class="TrivialFunctionalExpressionUsage" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
     <inspection_tool class="TrivialIf" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
     <inspection_tool class="TrivialMethodReference" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
-    <inspection_tool class="TypeMayBeWeakened" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="TypeMayBeWeakened" enabled="false" level="WEAK WARNING" enabled_by_default="false">
+      <option name="useRighthandTypeAsWeakestTypeInAssignments" value="true" />
+      <option name="useParameterizedTypeForCollectionMethods" value="true" />
+      <option name="doNotWeakenToJavaLangObject" value="true" />
+      <option name="onlyWeakentoInterface" value="true" />
+    </inspection_tool>
     <inspection_tool class="TypeParameterExtendsObject" enabled="false" level="WARNING" enabled_by_default="false" />
     <inspection_tool class="UnconstructableTestCase" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
     <inspection_tool class="UnnecessaryBreak" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
@@ -223,10 +341,19 @@
     <inspection_tool class="UnusedReturnValue" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
     <inspection_tool class="UseOfClone" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
     <inspection_tool class="UseOfObsoleteAssert" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
-    <inspection_tool class="UtilityClass" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="UtilityClass" enabled="false" level="WEAK WARNING" enabled_by_default="false">
+      <option name="ignorableAnnotations">
+        <value />
+      </option>
+    </inspection_tool>
     <inspection_tool class="UtilityClassCanBeEnum" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
     <inspection_tool class="UtilityClassWithPublicConstructor" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
-    <inspection_tool class="UtilityClassWithoutPrivateConstructor" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="UtilityClassWithoutPrivateConstructor" enabled="false" level="WEAK WARNING" enabled_by_default="false">
+      <option name="ignorableAnnotations">
+        <value />
+      </option>
+      <option name="ignoreClassesWithOnlyMain" value="false" />
+    </inspection_tool>
     <inspection_tool class="WeakerAccess" enabled="true" level="WEAK WARNING" enabled_by_default="true">
       <option name="SUGGEST_PACKAGE_LOCAL_FOR_MEMBERS" value="true" />
       <option name="SUGGEST_PACKAGE_LOCAL_FOR_TOP_CLASSES" value="true" />
